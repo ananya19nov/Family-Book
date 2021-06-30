@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+        MY FAMILY BOOK
+    </title>
+</head>
+
+<body>
+    <h1>
+        MY FAMILY BOOK
+    </h1>
+
+    <img src="Family.jpg" style="width: 30%;" id="family_member_image">
+    <h4 id="family_member_name"></h4>
+    <button onclick="update();">Next</button>
+</body>
+<script>
+
+    var images = ["Family.jpg", "grandfather.png", "granmother.jpg", "father.png", "Daughter.jpg", "Mom.jpg", "Bunny.jpg"];
+    var names = ["Family Book", "Vasant Adate", "Vasanti Adate", "Nitin Adate", "Ananya Adate", "Arpana Adate", "Bunny"]
+
+    var i = 0;
+    function update() {
+        var numbers_of_family_member_in_array = 6
+        if (i > numbers_of_family_member_in_array) {
+            i = 0;
+        }
+        document.getElementById("family_member_image").src = images[i];
+        document.getElementById("family_member_name").innerHTML = names[i];
+        i++;
+    }
+</script>
+
+</html>
